@@ -11,6 +11,6 @@
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
-<a href="${pageContext.request.contextPath }/index">API홈페이지</a>
+<a href="${pageContext.request.contextPath }/index">홈페이지 바로가기</a>
 </body>
 </html>
