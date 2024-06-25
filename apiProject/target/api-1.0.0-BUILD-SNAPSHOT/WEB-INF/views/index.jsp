@@ -54,7 +54,7 @@
                         </div>
                     </div>
                 </div>
-
+                <div id="search-area">
                 <div class="s-search-item">
                     <div class="search-url">
                         <span>Request URL</span>
@@ -77,6 +77,7 @@
                         <input type="text" id="option-value" placeholder="필수 옵션을 입력해주시오.">
                         <button id="option-button">추가</button>
                     </div>
+                </div>
                 </div>
 
             </div>

@@ -17,7 +17,7 @@ document.getElementById("data-search-btn").addEventListener("click", function(){
 
 //option 추가
 
-document.getElementById("option-button").addEventListener("click", function (){
+document.getElementById("option-button").addEventListener("click", async function (){
     console.log("들어옴")
     const newDiv = `
                 <div class="s-search-item">
@@ -27,7 +27,7 @@ document.getElementById("option-button").addEventListener("click", function (){
                     </div>
                 </div>
             `;
-    document.querySelector(".s-wrap-search").insertAdjacentHTML('beforeend', newDiv);
+    document.getElementById("search-area").insertAdjacentHTML('beforeend', newDiv);
 
 });
 // api 호출(데스크톱)
@@ -44,13 +44,13 @@ document.getElementById("url-search-btn2").addEventListener("click", async funct
 });
 // api 호출(데스크톱)
 async function fetchAirQualityData() {
+
     const request_url = document.getElementById("url-value").value + '?';
     const serviceKey = 'serviceKey=' + document.getElementById("serviceKey-value").value + '&';
     const url = request_url + serviceKey;
     // const url = document.getElementById("url-value").value;
     console.log(url);
     const outputDiv = document.getElementById("s-left-info");
-    document.querySelector(".loading-wrap").style.display = "flex";
     try {
         console.log(document.getElementById("loading").display);
         const response = await fetch(url);
@@ -83,7 +83,6 @@ async function fetchAirQualityData() {
             itemDiv.appendChild(document.createElement('hr'));
             outputDiv.appendChild(itemDiv);
         }
-        document.querySelector(".loading-wrap").style.display = "none";
 
     }catch (error) {
         console.error('Error:', error); // 에러 처리
