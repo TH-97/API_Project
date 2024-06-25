@@ -15,7 +15,21 @@ document.getElementById("data-search-btn").addEventListener("click", function(){
     window.open(url,"_blank")
 });
 
+//option 추가
 
+document.getElementById("option-button").addEventListener("click", function (){
+    console.log("들어옴")
+    const newDiv = `
+                <div class="s-search-item">
+                    <div class="search-op">
+                        <span>Option</span>
+                        <input type="text" value="">
+                    </div>
+                </div>
+            `;
+    document.querySelector(".s-wrap-search").insertAdjacentHTML('beforeend', newDiv);
+
+});
 // api 호출(데스크톱)
 document.getElementById("url-search-btn").addEventListener("click", async function(){
 
@@ -36,9 +50,9 @@ async function fetchAirQualityData() {
     // const url = document.getElementById("url-value").value;
     console.log(url);
     const outputDiv = document.getElementById("s-left-info");
-
+    document.querySelector(".loading-wrap").style.display = "flex";
     try {
-
+        console.log(document.getElementById("loading").display);
         const response = await fetch(url);
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
@@ -69,6 +83,7 @@ async function fetchAirQualityData() {
             itemDiv.appendChild(document.createElement('hr'));
             outputDiv.appendChild(itemDiv);
         }
+        document.querySelector(".loading-wrap").style.display = "none";
 
     }catch (error) {
         console.error('Error:', error); // 에러 처리

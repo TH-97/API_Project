@@ -44,11 +44,11 @@ a:link, a:hover, a:focus, a:visited{text-decoration: none;}
     .search-data-input input{width: 70%; height: 80%; border-radius: 20px; padding-left: 15px; font-size: 20px; text-align: center; &:focus{outline: none;}}
     .search-data-input button{position: absolute; right: 12%; width: 50px; height: 95%; border-top-right-radius: 18px;}
 
-    .search-url, .search-sk{width: 90%; height: 100%; display: flex; align-items: center;}
-    .search-url span, .search-sk span{ width: 20%; height: 100%; display: flex; align-items: center; justify-content: flex-start; font-weight: bold;}
-    .search-url input, .search-sk input{width: 60%; height: 30px; padding-left: 20px; font-size: 13px; &:focus{outline: none;}}
+    .search-url, .search-sk, .search-op{width: 90%; height: 100%; display: flex; align-items: center;}
+    .search-url span, .search-sk span,.search-op span{ width: 20%; height: 100%; display: flex; align-items: center; justify-content: flex-start; font-weight: bold;}
+    .search-url input, .search-sk input,.search-op input{width: 60%; height: 30px; padding-left: 20px; font-size: 13px; &:focus{outline: none;}}
 
-    .search-url button, .search-sk button{margin-left: 5px; width: 80px; height: 36px; border: 1px solid rgb(10, 10, 62); background-color: rgb(69, 122, 237); color: white;}
+    .search-url button, .search-sk button,.search-op button{margin-left: 5px; width: 80px; height: 36px; border: 1px solid rgb(10, 10, 62); background-color: rgb(69, 122, 237); color: white;}
     #url-search-btn{display: none;}
     #url-search-btn2{display: block;}
     /* section - header */

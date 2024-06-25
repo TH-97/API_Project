@@ -50,10 +50,10 @@ a:link, a:hover, a:focus, a:visited{text-decoration: none;}
     .search-data-input{position: relative; width: 100%; height: 50px; display: flex; align-items: center; justify-content: center;}
     .search-data-input input{border: 1px solid rgb(226, 225, 225); width: 50%; height: 85%;  padding-left: 15px; font-size: 20px; text-align: center; &:focus{outline: none;}}
     .search-data-input button{position: absolute; right: 24.2%; width: 50px; height: 95%; }
-    .search-url, .search-sk{width: 80%; height: 100%; display: flex; align-items: center;}
-    .search-url span, .search-sk span{width: 8%; height: 100%; display: flex; align-items: center; justify-content: flex-start; font-weight: bold;}
-    .search-url input, .search-sk input{border: 1px solid rgb(226, 225, 225); width: 80%; height: 34px; padding-left: 20px; font-size: 18px; &:focus{outline: none;}}
-    .search-url button, .search-sk button{margin-left: 5px; width: 80px; height: 36px; border: 1px solid rgb(10, 10, 62); background-color: rgb(69, 122, 237); color: white;}
+    .search-url, .search-sk, .search-op{width: 80%; height: 100%; display: flex; align-items: center;}
+    .search-url span, .search-sk span,.search-op span{width: 8%; height: 100%; display: flex; align-items: center; justify-content: flex-start; font-weight: bold;}
+    .search-url input, .search-sk input,.search-op input{border: 1px solid rgb(226, 225, 225); width: 80%; height: 34px; padding-left: 20px; font-size: 18px; &:focus{outline: none;}}
+    .search-url button, .search-sk button,.search-op button{margin-left: 5px; width: 80px; height: 36px; border: 1px solid rgb(10, 10, 62); background-color: rgb(69, 122, 237); color: white;}
     #url-search-btn2{display: none;}
     /* section - header */
     

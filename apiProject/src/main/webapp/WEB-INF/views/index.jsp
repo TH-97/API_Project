@@ -9,12 +9,16 @@
 
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/index.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/index-r.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/loading.css">
     <script src="${pageContext.request.contextPath }/resources/js/index.js" defer></script>
 </head>
 <body>
-    <div style="display: none;position: absolute;width: 100%; height: 100%;z-index: 1000;text-align: center">
-        <img src="${pageContext.request.contextPath }/resources/img/loading-buffering.gif" style="display: block">
-    </div>
+<!--loading-->
+<div class="loading-wrap loading-wrap--js" style="display: none">
+    <div class="loading-spinner loading-spinner--js"></div>
+    <p id="loadingMessage"></p>
+</div>
+<!--loading-->
     <header>
         <div class="h-wrap">
             <div class="h-wrap-container">
@@ -65,6 +69,13 @@
                         <span>Service KEY</span>
                         <input type="text" id="serviceKey-value" placeholder="요청하고자 하는 API의 발급받은 인증키를 입력하세요.">
 <%--                        <button>추가</button>--%>
+                    </div>
+                </div>
+                <div class="s-search-item">
+                    <div class="search-op">
+                        <span>Option</span>
+                        <input type="text" id="option-value" placeholder="필수 옵션을 입력해주시오.">
+                        <button id="option-button">추가</button>
                     </div>
                 </div>
 
